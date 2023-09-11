@@ -102,7 +102,7 @@
             tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
-            android:id="@+id/etUsuarioDeNombreSignUp"
+            android:id="@+id/etNombreDeUsuarioSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/et_username_hint"

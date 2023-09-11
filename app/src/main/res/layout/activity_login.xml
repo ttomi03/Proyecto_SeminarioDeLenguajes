@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/primary_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
+    </include>
     <ImageView
         android:id="@+id/ivBackgroundLogin"
         android:layout_width="match_parent"
@@ -22,14 +30,16 @@
     </ImageView>
 
     <ImageView
+        android:id="@+id/ivLogoNetflixLogin"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:background="@drawable/netflix_logo"
         android:scaleType="center"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/layoutLoginFields"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layoutLoginFields"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         android:contentDescription="@string/iv_logo_description">
     </ImageView>
 
@@ -48,7 +58,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="10"
         android:layout_marginLeft="35dp"
-        android:layout_marginRight="35dp">
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="60dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -90,6 +101,19 @@
             android:textColorHint="#8B8C8C"
             android:textSize="20sp"
             tools:ignore="VisualLintTextFieldSize" />
+
+        <CheckBox
+            android:id="@+id/cbRecordarUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recordar usuario"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/checkbox_bg"
+            android:backgroundTint="#E50914"
+            android:layout_marginBottom="10dp">
+        </CheckBox>
 
         <Button
             android:id="@+id/btnIniciarSesionLogin"
